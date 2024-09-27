@@ -117,36 +117,9 @@ export default function MemoryPlay() {
 
 	return (
 		<>
-			<div className="w-full relative flex items-center justify-center">
-				<div className="w-full bg-black relative flex flex-col justify-between overflow-y-hidden">
-					<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" style={{ position: 'relative', top: '-300px', left: '-200px' }} viewBox="0 0 1267 1267">
-						<g id="Grupo_1" data-name="Grupo 1" transform="translate(205.785 -1153.215)">
-							<circle id="Elipse_1" data-name="Elipse 1" cx="633.5" cy="633.5" r="633.5" transform="translate(-205.785 1153.215)" fill="#fe615e" />
-							<circle id="Elipse_2" data-name="Elipse 2" cx="523" cy="523" r="523" transform="translate(-95.785 1263.215)" fill="#efde5a" />
-							<circle id="Elipse_3" data-name="Elipse 3" cx="402" cy="402" r="402" transform="translate(25.215 1384.215)" fill="#68caf1" />
-							<circle id="Elipse_13" data-name="Elipse 13" cx="287" cy="287" r="287" transform="translate(140.215 1499.215)" />
-						</g>
-					</svg>
-					<img src="/assets/items/cosa.webp" className="absolute w-full m-auto top-0" alt="" />
-					<div className="w-full flex justify-between bottom-0 overflow-hidden relative">
-						<img src="/assets/items/parlante.webp" width={300} className="relative" style={{ bottom: '-100px', left: '-100px' }} alt="" />
-						<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" className="bottom-0" style={{ position: 'relative', bottom: '-100px', right: '-200px' }} viewBox="0 0 1267 1267">
-							<g id="Grupo_1" data-name="Grupo 1" transform="translate(205.785 -1153.215)">
-								<circle id="Elipse_1" data-name="Elipse 1" cx="633.5" cy="633.5" r="633.5" transform="translate(-205.785 1153.215)" fill="#fe615e" />
-								<circle id="Elipse_2" data-name="Elipse 2" cx="523" cy="523" r="523" transform="translate(-95.785 1263.215)" fill="#efde5a" />
-								<circle id="Elipse_3" data-name="Elipse 3" cx="402" cy="402" r="402" transform="translate(25.215 1384.215)" fill="#68caf1" />
-								<circle id="Elipse_13" data-name="Elipse 13" cx="287" cy="287" r="287" transform="translate(140.215 1499.215)" />
-							</g>
-						</svg>
-					</div>
-				</div>
-				<div className="h-full opacity-30 fixed inset-0 bg-cover bg-center"
-					style={{ backgroundImage: `url(/assets/texture.png)` }}
-				>
-				</div>
-
-				<div className='w-10/12 absolute top-4 mt-5 bg-white bg-opacity-40 rounded-md' style={{ fontFamily: 'dynapuff' }}>
-					<div className="w-full h-fit flex flex-col justify-between items-center text-white">
+			<div className="w-full min-h-screen flex items-center justify-center bg-center bg-cover bg-no-repeat" style={{backgroundImage: 'url("assets/bg_ruleta.png")', fontFamily: 'franklin-gothic-atf, sans-serif'}}>
+				<div className='w-10/12 absolute top-4 mt-5 bg-white bg-opacity-40 rounded-md'>
+					<div className="w-full h-fit flex flex-col justify-between items-center text-white font-bold">
 						<h1 className='text-6xl text-center mt-10 mb-2 underline'>Juego de la Memoria</h1>
 						<div className='w-3/5 h-3/5 flex flex-wrap items-center justify-center'>
 							{cardsA.map((card, index) => (

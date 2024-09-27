@@ -41,7 +41,7 @@ export default function Ruleta() {
         <>
             <div
                 className="w-full min-h-screen flex flex-col items-center justify-center bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: 'url("/assets/bg_ruleta.png")' }}
+                style={{ backgroundImage: 'url("/assets/bg_ruleta.png")', fontFamily: 'franklin-gothic-atf, sans-serif;' }}
             >
                 <img src={ruleta} className={isSpinning ? 'spin-animation' : ""} alt="" width={500} />
                 <button onClick={() => handleSpin()} className="mt-7 px-7 py-3 text-white font-bold rounded-full bg-indigo-700 text-3xl">GIRAR</button>
@@ -60,7 +60,12 @@ export default function Ruleta() {
                                 <h2 className='text-4xl'>{currentContent.title}</h2>
                                 <p className='text-3xl mt-3'>{currentContent.message}</p>
                             </div>
-                            <button className="w-fit px-7 py-3 uppercase font-bold text-2xl bg-indigo-600 rounded-full active:scale-110 transition" onClick={() => handleAction()}>Cerrar</button>
+                            <button 
+                                className="w-fit px-7 py-3 uppercase font-bold text-2xl bg-indigo-600 rounded-full active:scale-110 transition"
+                                onClick={() => handleAction()}
+                            >
+                                {currentContent.closeText}
+                            </button>
                         </div>
                     )
                 }

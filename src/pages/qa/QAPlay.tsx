@@ -78,8 +78,10 @@ export default function QAPlay() {
 	// }
 
 	return (
-		<div className="w-full mt-10 flex items-center justify-center overflow-x-hidden overflow-y-hidden">
-			<main className='w-full flex flex-col items-center justify-center gap-4 mt-20 ' style={{ fontFamily: 'dynapuff' }}>
+		<div className="w-full mt-10 flex items-center justify-center overflow-x-hidden overflow-y-hidden font-bold"
+			style={{fontFamily: 'franklin-gothic-atf, sans-serif;'}}
+		>
+			<main className='w-full flex flex-col items-center justify-center gap-4 mt-20 '>
                 <div className="w-3/5 h-44 border-2 flex flex-col items-center justify-center text-center bg-white rounded-full border-black px-10">
                     <h4 className='text-xl underline'>Pregunta {currentQuestion + 1} de {qaBlock.length}</h4>
                     <div id='question-display'>
@@ -103,7 +105,7 @@ export default function QAPlay() {
 			{isFinished && isOpenGo && <>
                 <div
                     className="w-5/6 h-[700px] rounded-3xl m-auto overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none bg-cover bg-center focus:outline-none"
-                    style={{ backgroundImage: `url(${bgResult})`, fontFamily: 'dynapuff' }}
+                    style={{ backgroundImage: `url(${bgResult})`, fontFamily: 'franklin-gothic-atf, sans-serif;'}}
                 >
                     <div className="w-auto my-12 bg-cover bg-center flex flex-col items-start pl-44 mt-20 text-white">
                         {/*content*/}
@@ -119,7 +121,7 @@ export default function QAPlay() {
                         </div>
                         <button
                             onClick={() => closeModalGo()}
-                            className='text-4xl mt-7 bg-purple px-3 py-4 rounded-full active:scale-105 transition'
+                            className='text-4xl mt-7 bg-purple px-3 py-4 rounded-full bg-orange-600 active:scale-105 transition'
                         >
                             Volver a Inicio
                         </button>
