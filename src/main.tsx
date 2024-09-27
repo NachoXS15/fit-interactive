@@ -5,6 +5,8 @@ import './index.css'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import MemoryRules from './pages/memory/MemoryRules.tsx'
 import MemoryPlay from './pages/memory/MemoryPlay.tsx'
+import Ruleta from './pages/Ruleta/Ruleta.tsx'
+import QAPlay from './pages/qa/QAPlay.tsx'
 
 const router = createBrowserRouter([
   {
@@ -19,6 +21,16 @@ const router = createBrowserRouter([
   {
     path: '/memorygame-play',
     element: <MemoryPlay />
+  },
+  //ruleta
+  {
+    path: '/ruleta',
+    element: <Ruleta />
+  },
+  //preguntas
+  {
+    path: "/qaplay/:id",
+    element: <QAPlay />
   }
 ])
 

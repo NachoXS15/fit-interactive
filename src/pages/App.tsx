@@ -9,7 +9,7 @@ export default function App() {
       <NavLink to="/" className="w-1/4 h-52 active:scale-110 transition flex items-center justify-center text-3xl rounded-3xl bg-indigo-500">
         <h2>MAPA INTERACTIVO</h2>
       </NavLink>
-      <NavLink to="/" className="w-1/4 h-52 active:scale-110 transition flex items-center justify-center text-3xl rounded-3xl bg-indigo-500">
+      <NavLink to="/ruleta" className="w-1/4 h-52 active:scale-110 transition flex items-center justify-center text-3xl rounded-3xl bg-indigo-500">
         <h2>RULETA</h2>
       </NavLink>
       <NavLink to="/" className="w-1/4 h-52 active:scale-110 transition flex items-center justify-center text-3xl rounded-3xl bg-indigo-500">
