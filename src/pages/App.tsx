@@ -12,9 +12,9 @@ export default function App() {
       <NavLink to="/ruleta" className="w-1/4 h-52 text-darkblue active:scale-110 transition flex items-center justify-center text-3xl rounded-3xl bg-beige">
         <h2>RULETA</h2>
       </NavLink>
-      <NavLink to="/" className="w-1/4 h-52 active:scale-110 transition flex items-center justify-center text-3xl rounded-3xl bg-orange-lr">
+      {/* <NavLink to="/" className="w-1/4 h-52 active:scale-110 transition flex items-center justify-center text-3xl rounded-3xl bg-orange-lr">
         <h2>ROMPECABEZAS</h2>
-      </NavLink>
+      </NavLink> */}
       <NavLink to="/memorygame-rules" className="w-1/4 h-52 active:scale-110 transition flex items-center justify-center text-3xl rounded-3xl bg-green-lr">
         <h2>MEMORIA</h2>
       </NavLink>

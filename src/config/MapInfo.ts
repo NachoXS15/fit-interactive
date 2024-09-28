@@ -147,7 +147,13 @@ const MapInfo = [
         nameDep: "Gral. Juan Facundo Quiroga",
         desc: "Con recorridos históricos vinculados a las luchas federales y culturas originarias, este departamento es ideal para el turismo religioso e histórico. Entre sus principales atractivos están la Ruta de los Caudillos, la Reserva Provincial Guasamayo y la Iglesia Nuestra Señora de Copacabana.",
         img: [
-
+            "/assets/map/deptos/fq/1.jpg",
+            "/assets/map/deptos/fq/2.jpg",
+            "/assets/map/deptos/fq/3.jpg",
+            "/assets/map/deptos/fq/4.jpg",
+            "/assets/map/deptos/fq/5.jpg",
+            "/assets/map/deptos/fq/6.jpg",
+            "/assets/map/deptos/fq/7.jpg",
         ],
         region: "Sur"
     },
@@ -155,28 +161,60 @@ const MapInfo = [
         id: 11,
         nameDep: "Gral. Lamadrid",
         desc: "Este departamento es famoso por el turismo aventura, especialmente por sus paisajes imponentes, escenario del Rally Dakar. Entre sus atractivos están la Quebrada del Yeso, Senderos de Peregrinos, El Infiernillo y el Cerro El Toro.",
-        img: [],
+        img: [
+            "/assets/map/deptos/lamadrid/1.jpg",
+            "/assets/map/deptos/lamadrid/2.jpg",
+            "/assets/map/deptos/lamadrid/3.jpg",
+            "/assets/map/deptos/lamadrid/4.jpg",
+            "/assets/map/deptos/lamadrid/5.jpg",
+            "/assets/map/deptos/lamadrid/6.JPG",
+            "/assets/map/deptos/lamadrid/7.jpg",
+            "/assets/map/deptos/lamadrid/8.jpg",
+        ],
         region: "Oeste"
     },
     {
         id: 12,
         nameDep: "Gral. Ortiz de Ocampo",
         desc: "Con atractivos como las aguas termales de Ambil y la Cruz Gloriosa (Dozulé), este departamento combina turismo natural y religioso. La flora y fauna peculiar de la región, junto con sitios históricos, hacen de este un destino con encanto.",
-        img: [],
+        img: [
+            "/assets/map/deptos/ortiz/1.jpg",
+            "/assets/map/deptos/ortiz/2.jpg",
+            "/assets/map/deptos/ortiz/3.jpeg",
+            "/assets/map/deptos/ortiz/4.jpg",
+            "/assets/map/deptos/ortiz/5.JPG",
+            "/assets/map/deptos/ortiz/6.JPG",
+            "/assets/map/deptos/ortiz/7.JPG",
+        ],
         region: "Sur"
     },
     {
         id: 13,
         nameDep: "Gral. San Martín",
         desc: "Este departamento ofrece un turismo basado en la historia, la naturaleza y la religión. Entre sus atractivos destacan Pampa de las Salinas, Cuatro Esquinas, y diversos senderos agrestes ideales para caminatas y cabalgatas.",
-        img: [],
+        img: [
+            "/assets/map/deptos/san_martin/1.jpg",
+            "/assets/map/deptos/san_martin/2.jpg",
+            "/assets/map/deptos/san_martin/3.jpg",
+            "/assets/map/deptos/san_martin/4.jpg",
+            "/assets/map/deptos/san_martin/5.jpg",
+            "/assets/map/deptos/san_martin/6.jpg",
+        ],
         region: "Sur"
     },
     {
         id: 14,
         nameDep: "Independencia",
         desc: "Es un departamento con un gran potencial turístico gracias a sus atractivos naturales como la Reserva Provincial de Usos Múltiples Los Colorados, la Cueva del Chacho y el Parque Provincial El Chiflón. Es ideal para los amantes de la naturaleza y el turismo aventura.",
-        img: [],
+        img: [
+            "/assets/map/deptos/indep/1.jpg",
+            "/assets/map/deptos/indep/2.jpg",
+            "/assets/map/deptos/indep/3.JPG",
+            "/assets/map/deptos/indep/4.JPG",
+            "/assets/map/deptos/indep/5.jpg",
+            "/assets/map/deptos/indep/6.JPG",
+            "/assets/map/deptos/indep/7.jpg",
+        ],
         region: "Sur"
     },
     {
