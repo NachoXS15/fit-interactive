@@ -2,7 +2,8 @@ import { NavLink } from "react-router-dom";
 
 export default function MapMenu() {
   return (
-    <div className="w-full min-h-screen flex items-center justify-center">
+    <div className="w-full min-h-screen relative flex items-center justify-center">
+        <NavLink to="/" className="absolute top-10"><img src="/assets/lr_logo.png"  width={200} alt="" /></NavLink>
         <NavLink to="/map/north" style={{backgroundImage: 'url("https://scontent.fmdz5-1.fna.fbcdn.net/v/t1.6435-9/67460186_946962972324319_4620240493769392128_n.jpg?stp=dst-jpg_p526x296&_nc_cat=110&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeFTgayrlOJcooBFRvZhE4DCrLY3X1fSDnWstjdfV9IOdfJJaxszmWdMN15ob__QHut1wc-y9frcc-4oZpdsQmFF&_nc_ohc=1eoK9e5qlkEQ7kNvgFc2Lnw&_nc_ht=scontent.fmdz5-1.fna&oh=00_AYAD4V5NxLx8oGH5o-iF110rDrlgl_BDPvDryeE-yv6hjg&oe=671EFC12")'}} className="w-1/3 min-h-screen flex items-center justify-center bg-cover">
           <div className="w-full min-h-screen px-10 bg-red-lr bg-opacity-80 flex items-center justify-center active:bg-opacity-85 transition">
             <img src="/assets/map/logos/Norte.png" alt="" />
