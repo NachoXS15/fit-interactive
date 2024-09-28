@@ -60,7 +60,7 @@ export default function Ruleta() {
                             </div>
                             <div className="text-end">
                                 <h2 className='text-5xl text-darkblue'>{currentContent.title}</h2>
-                                <p className='text-3xl mt-3 text-orange-500'>{currentContent.message}</p>
+                                <p className='text-2xl mt-3 text-orange-500'>{currentContent.message}</p>
                             </div>
                             <button 
                                 className="w-fit px-7 py-3 uppercase font-bold text-4xl bg-orange-600 rounded-full active:scale-110 transition"

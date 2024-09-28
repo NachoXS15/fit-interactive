@@ -84,7 +84,17 @@ const MapInfo = [
         nameDep: "General Felipe Varela",
         desc: "Este departamento alberga atractivos turísticos como el Parque Nacional Talampaya (una de las 7 maravillas de Argentina y Patrimonio de la Humanidad), Vallecito Encantado, Cañón del Triásico y Cañón de Anchumbil. Es un destino ideal para el turismo todo el año, destacando también sitios como Aicuña y otras maravillas naturales.",
         img: [
-            
+            "/assets/map/deptos/fv/1.jpg",
+            "/assets/map/deptos/fv/2.JPG",
+            "/assets/map/deptos/fv/3.jpg",
+            "/assets/map/deptos/fv/4.jpg",
+            "/assets/map/deptos/fv/5.jpg",
+            "/assets/map/deptos/fv/6.jpg",
+            "/assets/map/deptos/fv/7.jpeg",
+            "/assets/map/deptos/fv/8.JPG",
+            "/assets/map/deptos/fv/9.JPG",
+            "/assets/map/deptos/fv/10.JPG",
+
         ],
         region: "Oeste"
     },
@@ -92,28 +102,53 @@ const MapInfo = [
         id: 7,
         nameDep: "Famatina",
         desc: "Famatina es un área rica en flora y fauna, con atractivos como el Cerro Famatina, Ruinas de la Mina del Oro, y el Cañón del Ocre. El turismo de aventura, senderismo y escalada son las principales actividades, destacando la conexión con la naturaleza y las tradiciones locales.",
-        img: [],
+        img: [
+            "/assets/map/deptos/famatina/1.jpg",
+            "/assets/map/deptos/famatina/2.jpg",
+            "/assets/map/deptos/famatina/3.jpg",
+            "/assets/map/deptos/famatina/4.jpg",
+            "/assets/map/deptos/famatina/5.jpg",
+            "/assets/map/deptos/famatina/6.jpg",
+        ],
         region: "Oeste"
     },
     {
         id: 8,
         nameDep: "Gral. Ángel V. Peñaloza",
         desc: "Este pintoresco departamento destaca por la Quebrada de los Cóndores, donde es posible observar una gran cantidad de ejemplares de cóndor andino. Otros atractivos son la casa natal de Abel Bazán y Bustos, la Iglesia Nuestra Señora del Rosario de Tama y la Sierra de los Quinteros.",
-        img: [],
+        img: [
+            "/assets/map/deptos/a_penaloza/1.JPG",
+            "/assets/map/deptos/a_penaloza/2.jpg",
+            "/assets/map/deptos/a_penaloza/3.jpg",
+            "/assets/map/deptos/a_penaloza/4.jpg",
+            "/assets/map/deptos/a_penaloza/5.JPG",
+            "/assets/map/deptos/a_penaloza/6.JPG",
+        ],
         region: "Sur"
     },
     {
         id: 9,
         nameDep: "Gral. Belgrano",
         desc: "Este departamento ofrece sitios de interés como la Parroquia Nuestra Señora de Candelaria, Capilla Virgen de Fátima, Cristo de los Llanos, el Dique de Olta y el Bosque Petrificado de Olta. Es un destino ideal para el turismo cultural y recreativo.",
-        img: [],
+        img: [
+            "/assets/map/deptos/belgrano/1.jpg",
+            "/assets/map/deptos/belgrano/2.jpg",
+            "/assets/map/deptos/belgrano/3.JPG",
+            "/assets/map/deptos/belgrano/4.JPG",
+            "/assets/map/deptos/belgrano/5.jpg",
+            "/assets/map/deptos/belgrano/6.JPG",
+            "/assets/map/deptos/belgrano/7.JPG",
+
+        ],
         region: "Sur"
     },
     {
         id: 10,
         nameDep: "Gral. Juan Facundo Quiroga",
         desc: "Con recorridos históricos vinculados a las luchas federales y culturas originarias, este departamento es ideal para el turismo religioso e histórico. Entre sus principales atractivos están la Ruta de los Caudillos, la Reserva Provincial Guasamayo y la Iglesia Nuestra Señora de Copacabana.",
-        img: [],
+        img: [
+
+        ],
         region: "Sur"
     },
     {

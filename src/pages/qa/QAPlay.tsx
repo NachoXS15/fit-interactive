@@ -111,11 +111,11 @@ export default function QAPlay() {
                         <p className='text-4xl text-darkblue'>Esperamos que te hayas divertido</p>
                         <div className='mt-14 text-end'>
                             <h2 className='text-5xl text-darkblue'>{phrase.title}</h2>
-                            <h2 className='text-2xl text-orange-500'>{phrase.desc}</h2>
+                            <h2 className='text-xl text-orange-500'>{phrase.desc}</h2>
                         </div>
                         <div className='mt-10 text-end'>
-                            <h2 className='text-5xl text-darkblue'>Acertaste:</h2>
-                            <h2 className='text-4xl text-orange-500'><span className='text-green-600'>{score} </span>de {qaBlock.length} preguntas</h2>
+                            <h2 className='text-4xl text-darkblue'>Acertaste:</h2>
+                            <h2 className='text-3xl text-orange-500'><span className='text-green-600'>{score} </span>de {qaBlock.length} preguntas</h2>
                         </div>
                         <button
                             onClick={() => closeModalGo()}

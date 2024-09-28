@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import CardProps from "../../config/CardProps";
 import cards from "../../config/Cards";
 import getPhrase from "./getPhrase";
-import bgResult from '../../../public/assets/memory_result.webp'
+import bgResult from '../../../public/assets/memory_bg.webp'
 import Card from "../../components/Card";
 import { NavLink } from "react-router-dom";
 export default function MemoryPlay() {
@@ -145,19 +145,19 @@ export default function MemoryPlay() {
 				isFinished && showResults ? <>
 					<div
 						className="w-5/6 h-[650px] rounded-3xl m-auto overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none bg-cover bg-center focus:outline-none"
-						style={{ backgroundImage: `url(${bgResult})`, fontFamily: 'dynapuff' }}
+						style={{ backgroundImage: `url(${bgResult})`, fontFamily: 'franklin-gothic-atf, sans-serif' }}
 					>
 						<div className="w-auto my-12 bg-cover bg-center flex flex-col items-start pl-36 pt-14 text-white">
 							{/*content*/}
-							<h2 className='text-6xl text-green-600'>¡Juego terminado!</h2>
-							<p className='text-4xl mt-3'>Esperamos que te hayas divertido</p>
+							<h2 className='text-6xl text-green-600 font-bold'>¡Juego terminado!</h2>
+							<p className='text-4xl mt-3 font-semibold text-darkblue'>Esperamos que te hayas divertido</p>
 							<div className='mt-14'>
-								<h2 className='text-5xl'>{phrase.title}</h2>
-								<h2 className='w-4/5 text-3xl'>{phrase.desc}</h2>
+								<h2 className='text-5xl text-darkblue font-semibold'>{phrase.title}</h2>
+								<h2 className='w-3/5 text-3xl text-orange-400 font-medium'>{phrase.desc}</h2>
 							</div>
 							<NavLink
-								to="/"
-								className='text-3xl mt-14 bg-purple px-3 py-4 bg-indigo-800 rounded-full active:scale-105 transition'
+								to="/memorygame-rules"
+								className='text-3xl font-bold mt-14 bg-purple px-3 py-4 bg-indigo-800 rounded-full active:scale-105 transition'
 							>
 								Volver a inicio
 							</NavLink>
