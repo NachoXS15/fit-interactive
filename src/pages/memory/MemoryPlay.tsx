@@ -118,7 +118,7 @@ export default function MemoryPlay() {
 	return (
 		<>
 			<div className="w-full min-h-screen flex items-center justify-center bg-center bg-cover bg-no-repeat" style={{backgroundImage: 'url("assets/bg_ruleta.png")', fontFamily: 'franklin-gothic-atf, sans-serif'}}>
-				<div className='w-10/12 absolute top-4 mt-5 bg-white bg-opacity-40 rounded-md'>
+				<div className='w-10/12 mt-5 bg-white bg-opacity-40 rounded-md'>
 					<div className="w-full h-fit flex flex-col justify-between items-center text-white font-bold">
 						<h1 className='text-6xl text-center mt-10 mb-2 underline'>Juego de la Memoria</h1>
 						<div className='w-3/5 h-3/5 flex flex-wrap items-center justify-center'>

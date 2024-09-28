@@ -9,7 +9,7 @@ export default function QAPlay() {
 	const [score, setScore] = useState(0);
 	const [optionsPicked, setOptionsPicked] = useState<{ question: string, answer: string, isCorrect: boolean }[]>([]);
 	const [isOpenGo, setIsOpenGo] = useState(false);
-	// const [showAnswers, setShowAnswers] = useState(false);
+	const [showAnswers, setShowAnswers] = useState(false);
 	const [isFinished, setIsFinished] = useState(false);
 	const [phrase, setPhrase] = useState({ title: '', desc: '' });
 	const [timeLeft, setTimeLeft] = useState(15);
@@ -68,14 +68,13 @@ export default function QAPlay() {
 	};
 	const closeModalGo = () => {
 		setIsOpenGo(false)
-		// setShowAnswers(true)
-        navigate('/')
+		setShowAnswers(true)
 	}
 
-	// const closeModalAnswers = () => {
-	// 	setShowAnswers(false)
-	// 	window.close();
-	// }
+	const closeModalAnswers = () => {
+		setShowAnswers(false)
+		navigate("/")
+	}
 
 	return (
 		<div className="w-full mt-10 flex items-center justify-center overflow-x-hidden overflow-y-hidden font-bold"
@@ -95,7 +94,7 @@ export default function QAPlay() {
                             key={answer.answer}
                             onClick={(e) => handleAnswer(answer.isCorrect, e)}
                             className='w-full h-20 rounded-full border bg-white border-black px-10 text-2xl active:bg-blue-700 active:text-white'
-                            // disabled={showAnswers}
+                            disabled={showAnswers}
                         >
                             {answer.answer}
                         </button>
@@ -129,30 +128,32 @@ export default function QAPlay() {
                 </div>
                 <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
             </>}
+			{isFinished && showAnswers && <>
+				<div
+					className="w-11/12 h-[850px] rounded-3xl m-auto overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none bg-cover bg-center focus:outline-none"
+					style={{ backgroundImage: `url(${bgResult})`}}
+				>
+					<div className="w-full h-[700px] my-16 gap-5 bg-cover bg-center flex flex-col items-center justify-center text-white"
+						style={{fontFamily: 'franklin-gothic-atf, sans-serif;'}}
+					>
+						<h1 className='text-5xl mt-8'>Verificá tus respuestas</h1>
+						<section className='w-full flex flex-wrap  items-center justify-center gap-0.5'>
+							{optionsPicked.map((picked, index) => (
+								<div key={index} className='w-1/3 flex flex-col'>
+									<p className='text-md font-bold'><strong><span className='text-xl'>Pregunta: </span></strong><br />{picked.question}</p>
+									<p className='text-sm'><strong><span>Respuesta Elegida: </span></strong>{picked.answer} - <span className={picked.isCorrect ? 'bg-green-600 text-xl' : 'bg-red-600 text-xl'}>({picked.answer === "" ? 'No respondió' : picked.isCorrect ? 'Correcto' : 'Incorrecto'})</span></p>
+									<hr className="w-3/5 border" />
+								</div>
+							))}
+						</section>
+						<button onClick={closeModalAnswers} className="text-3xl bg-purple px-3 py-4 rounded-full bg-indigo-600 active:scale-105 transition">Volver a empezar</button>
+					</div>
+				</div>
+				<div className="opacity-75 fixed inset-0 z-40 bg-black"></div>
+			</>
+			}
             
 		</div>
 	)
 }
-{/* {isFinished && showAnswers && <>
-    <div
-        className="w-11/12 h-[850px] rounded-3xl m-auto overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none bg-cover bg-center focus:outline-none"
-        style={{ backgroundImage: `url(${bgResult})`, fontFamily: 'dynapuff' }}
-    >
-        <div className="w-full h-[700px] my-16 gap-5 bg-cover bg-center flex flex-col items-center justify-center text-white">
-            <h1 className='text-5xl mt-8'>Verificá tus respuestas</h1>
-            <section className='w-full flex flex-wrap  items-center justify-center gap-0.5'>
-                {optionsPicked.map((picked, index) => (
-                    <div key={index} className='w-1/3 flex flex-col'>
-                        <p className='text-xl'><strong><span className='text-xl'>Pregunta: </span></strong><br />{picked.question}</p>
-                        <p className='text-md'><strong><span>Respuesta Elegida: </span></strong>{picked.answer} - <span className={picked.isCorrect ? 'bg-green-600 text-xl' : 'bg-red-600 text-xl'}>({picked.answer === "" ? 'No respondió' : picked.isCorrect ? 'Correcto' : 'Incorrecto'})</span></p>
-                        <hr className="w-3/5 border" />
-                    </div>
-                ))}
-            </section>
-            <button onClick={closeModalAnswers} className="text-3xl  bg-purple px-3 py-4 rounded-full active:scale-105 transition">Volver a empezar</button>
-        </div>
-    </div>
-    <div className="opacity-75 fixed inset-0 z-40 bg-black"></div>
-</>
-} */}
 
