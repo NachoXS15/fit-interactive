@@ -5,7 +5,13 @@ export default {
     "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        "beige": "#CCD4BD",
+        "darkblue": "#264c62",
+        "darkblue2": "#2c495d"
+      }
+    },
   },
   plugins: [],
 }

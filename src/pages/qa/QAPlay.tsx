@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Questions from "../../config/Questions";
 import getPhrase from "./getPhrase";
 import TimerBar from "../../components/Timebar";
-import bgResult from '/assets/qa_result.webp'
+import bgResult from '/assets/ruleta_result.webp'
 import { useNavigate } from "react-router";
 export default function QAPlay() {
 	const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -73,14 +73,14 @@ export default function QAPlay() {
 
 	const closeModalAnswers = () => {
 		setShowAnswers(false)
-		navigate("/")
+		navigate("/ruleta")
 	}
 
 	return (
-		<div className="w-full mt-10 flex items-center justify-center overflow-x-hidden overflow-y-hidden font-bold"
+		<div className="w-full min-h-screen flex items-center justify-center bg-beige overflow-x-hidden overflow-y-hidden font-bold"
 			style={{fontFamily: 'franklin-gothic-atf, sans-serif;'}}
 		>
-			<main className='w-full flex flex-col items-center justify-center gap-4 mt-20 '>
+			<main className='w-full flex flex-col items-center justify-center gap-4'>
                 <div className="w-3/5 h-44 border-2 flex flex-col items-center justify-center text-center bg-white rounded-full border-black px-10">
                     <h4 className='text-xl underline'>Pregunta {currentQuestion + 1} de {qaBlock.length}</h4>
                     <div id='question-display'>
@@ -103,26 +103,25 @@ export default function QAPlay() {
             </main>
 			{isFinished && isOpenGo && <>
                 <div
-                    className="w-5/6 h-[700px] rounded-3xl m-auto overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none bg-cover bg-center focus:outline-none"
+                    className="w-5/6 h-[650px] rounded-3xl m-auto overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none bg-cover bg-center focus:outline-none"
                     style={{ backgroundImage: `url(${bgResult})`, fontFamily: 'franklin-gothic-atf, sans-serif;'}}
                 >
-                    <div className="w-auto my-12 bg-cover bg-center flex flex-col items-start pl-44 mt-20 text-white">
-                        {/*content*/}
+                    <div className="w-auto my-12 bg-cover bg-center flex flex-col items-end pr-20 mt-20 text-white">
                         <h2 className='text-6xl text-green-600 mt-4'>¡Juego terminado!</h2>
-                        <p className='text-4xl'>Esperamos que te hayas divertido</p>
-                        <div className='mt-14'>
-                            <h2 className='text-5xl'>{phrase.title}</h2>
-                            <h2 className='w-4/5 text-3xl'>{phrase.desc}</h2>
+                        <p className='text-4xl text-darkblue'>Esperamos que te hayas divertido</p>
+                        <div className='mt-14 text-end'>
+                            <h2 className='text-5xl text-darkblue'>{phrase.title}</h2>
+                            <h2 className='text-2xl text-orange-500'>{phrase.desc}</h2>
                         </div>
-                        <div className='mt-10'>
-                            <h2 className='text-5xl'>Acertaste:</h2>
-                            <h2 className='text-4xl'><span className='text-green-600'>{score} </span>de {qaBlock.length} preguntas</h2>
+                        <div className='mt-10 text-end'>
+                            <h2 className='text-5xl text-darkblue'>Acertaste:</h2>
+                            <h2 className='text-4xl text-orange-500'><span className='text-green-600'>{score} </span>de {qaBlock.length} preguntas</h2>
                         </div>
                         <button
                             onClick={() => closeModalGo()}
                             className='text-4xl mt-7 bg-purple px-3 py-4 rounded-full bg-orange-600 active:scale-105 transition'
                         >
-                            Volver a Inicio
+                            Mostrar Respuestas
                         </button>
                     </div>
                 </div>
@@ -130,23 +129,23 @@ export default function QAPlay() {
             </>}
 			{isFinished && showAnswers && <>
 				<div
-					className="w-11/12 h-[850px] rounded-3xl m-auto overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none bg-cover bg-center focus:outline-none"
-					style={{ backgroundImage: `url(${bgResult})`}}
+					className="w-11/12 h-[850px] bg-beige rounded-3xl m-auto overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none bg-cover bg-center focus:outline-none"
+					// style={{ backgroundImage: `url(${bgResult})`}}
 				>
 					<div className="w-full h-[700px] my-16 gap-5 bg-cover bg-center flex flex-col items-center justify-center text-white"
 						style={{fontFamily: 'franklin-gothic-atf, sans-serif;'}}
 					>
-						<h1 className='text-5xl mt-8'>Verificá tus respuestas</h1>
+						<h1 className='text-5xl mt-8 text-darkblue'>Verificá tus respuestas</h1>
 						<section className='w-full flex flex-wrap  items-center justify-center gap-0.5'>
 							{optionsPicked.map((picked, index) => (
 								<div key={index} className='w-1/3 flex flex-col'>
-									<p className='text-md font-bold'><strong><span className='text-xl'>Pregunta: </span></strong><br />{picked.question}</p>
-									<p className='text-sm'><strong><span>Respuesta Elegida: </span></strong>{picked.answer} - <span className={picked.isCorrect ? 'bg-green-600 text-xl' : 'bg-red-600 text-xl'}>({picked.answer === "" ? 'No respondió' : picked.isCorrect ? 'Correcto' : 'Incorrecto'})</span></p>
+									<p className='text-md font-bold text-darkblue'><strong><span className='text-xl text-orange-500'>Pregunta: </span></strong><br />{picked.question}</p>
+									<p className='text-sm text-red-500'><strong><span className="">Respuesta Elegida: </span></strong>{picked.answer} - <span className={picked.isCorrect ? 'bg-green-600 text-xl text-white' : 'bg-red-600 text-xl text-white'}>({picked.answer === "" ? 'No respondió' : picked.isCorrect ? 'Correcto' : 'Incorrecto'})</span></p>
 									<hr className="w-3/5 border" />
 								</div>
 							))}
 						</section>
-						<button onClick={closeModalAnswers} className="text-3xl bg-purple px-3 py-4 rounded-full bg-indigo-600 active:scale-105 transition">Volver a empezar</button>
+						<button onClick={closeModalAnswers} className="text-3xl bg-purple px-3 py-4 rounded-full uppercase bg-orange-600 active:scale-105 transition">Volver a empezar</button>
 					</div>
 				</div>
 				<div className="opacity-75 fixed inset-0 z-40 bg-black"></div>
