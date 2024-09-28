@@ -4,6 +4,8 @@ import getPhrase from "./getPhrase";
 import TimerBar from "../../components/Timebar";
 import bgResult from '/assets/ruleta_result.webp'
 import { useNavigate } from "react-router";
+import { NavLink } from "react-router-dom";
+import { CloseIcon } from "../../components/Icons";
 export default function QAPlay() {
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [score, setScore] = useState(0);
@@ -81,6 +83,9 @@ export default function QAPlay() {
 			style={{fontFamily: 'franklin-gothic-atf, sans-serif;'}}
 		>
 			<main className='w-full flex flex-col items-center justify-center gap-4'>
+				<NavLink to="/ruleta" className="self-end pr-20">
+					<CloseIcon />
+				</NavLink>
                 <div className="w-3/5 h-44 border-2 flex flex-col items-center justify-center text-center bg-white rounded-full border-black px-10">
                     <h4 className='text-xl underline'>Pregunta {currentQuestion + 1} de {qaBlock.length}</h4>
                     <div id='question-display'>

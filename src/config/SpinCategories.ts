@@ -83,7 +83,7 @@ const categoryContent: Record<Category, { title: string; message: string; action
     },
     "Premio imperdible": {
         title: "Premio Imperdible",
-        message: "Has ganado el premio más grande. ¡Enhorabuena!",
+        message: "Has ganado el premio más grande. ¡Felicidades!",
         action: "spin",
         closeText: "Cerrar"
     },

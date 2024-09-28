@@ -1,9 +1,10 @@
 import { useState } from "react";
 import '../../ruleta.css'
 import ruleta from '../../../public/assets/RULETA.webp'
-import {Category, categories, categoryContent} from "../../config/SpinCategories";
+import { Category, categories, categoryContent } from "../../config/SpinCategories";
 import PhraseModal from "./PhraseModal";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { ArrowBack } from "../../components/Icons";
 export default function Ruleta() {
     const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
     const [isModalOpen, setModalOpen] = useState<boolean>(false);
@@ -43,6 +44,7 @@ export default function Ruleta() {
                 className="w-full min-h-screen flex flex-col items-center justify-center bg-cover bg-center bg-no-repeat"
                 style={{ backgroundImage: 'url("/assets/bg_ruleta.png")', fontFamily: 'franklin-gothic-atf, sans-serif;' }}
             >
+                <NavLink to="/" className="text-4xl pl-32 self-start"><ArrowBack /></NavLink>
                 <img src={ruleta} className={isSpinning ? 'spin-animation' : ""} alt="" width={600} />
                 <button onClick={() => handleSpin()} className="mt-7 px-7 py-3 text-white font-bold rounded-full bg-indigo-700 text-4xl">GIRAR</button>
             </div>
@@ -51,7 +53,7 @@ export default function Ruleta() {
                 isOpen={isModalOpen}
                 content={
                     currentContent && (
-                        <div 
+                        <div
                             className="h-full font-bold flex flex-col items-end justify-center pr-28 gap-14"
                         >
                             <div className="text-end">
@@ -62,7 +64,7 @@ export default function Ruleta() {
                                 <h2 className='text-5xl text-darkblue'>{currentContent.title}</h2>
                                 <p className='text-2xl mt-3 text-orange-500'>{currentContent.message}</p>
                             </div>
-                            <button 
+                            <button
                                 className="w-fit px-7 py-3 uppercase font-bold text-4xl bg-orange-600 rounded-full active:scale-110 transition"
                                 onClick={() => handleAction()}
                             >
