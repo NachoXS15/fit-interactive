@@ -221,28 +221,56 @@ const MapInfo = [
         id: 15,
         nameDep: "Rosario V. Peñaloza",
         desc: "Único departamento con nombre de mujer en honor a la Maestra de la Patria, ofrece un novedoso circuito de Turismo Religioso, tanto urbano como rural. Algunos de sus principales atractivos son el Cerro de la Cruz, la Iglesia Inmaculada Concepción de Chepes y el Museo de los Caudillos.",
-        img: [],
+        img: [
+            "/assets/map/deptos/rosario/1.jpg",
+            "/assets/map/deptos/rosario/2.jpg",
+            "/assets/map/deptos/rosario/3.JPG",
+            "/assets/map/deptos/rosario/4.jpg",
+            "/assets/map/deptos/rosario/5.jpg",
+            "/assets/map/deptos/rosario/6.jpg",
+        ],
         region: "Sur"
     },
     {
         id: 16,
         nameDep: "San Blas de los Sauces",
         desc: "Este pintoresco departamento es famoso por el Sitio Arqueológico de Hualco y la Cascada Cola de la Novia. Sus pequeñas localidades brindan una cálida hospitalidad, ofreciendo un ambiente acogedor y relajante para los turistas.",
-        img: [],
+        img: [
+            "/assets/map/deptos/ls/1.jpg",
+            "/assets/map/deptos/ls/2.jpg",
+            "/assets/map/deptos/ls/3.jpg",
+            "/assets/map/deptos/ls/4.jpg",
+            "/assets/map/deptos/ls/5.jpg",
+            "/assets/map/deptos/ls/6.jpg",
+        ],
         region: "Norte"
     },
     {
         id: 17,
         nameDep: "Sanagasta",
         desc: "Con un microclima especial, Sanagasta es un oasis en verano. Entre sus principales atractivos se encuentran el Mercado Artesanal, la Bodega Loma Blanca y la Cueva de las Brujas, además del popular Festival Chayero Sanagasteño y el Parque Geológico de Dinosaurios.",
-        img: [],
+        img: [
+            "/assets/map/deptos/sanagasta/1.jpg",
+            "/assets/map/deptos/sanagasta/2.jpg",
+            "/assets/map/deptos/sanagasta/3.JPG",
+            "/assets/map/deptos/sanagasta/4.jpg",
+            "/assets/map/deptos/sanagasta/5.JPG",
+            "/assets/map/deptos/sanagasta/6.jpg",
+        ],
         region: "Norte"
     },
     {
         id: 18,
         nameDep: "Vinchina",
         desc: "Este departamento se destaca por sus increíbles paisajes naturales como la Reserva Provincial Laguna Brava, el Cráter Corona del Inca y la Quebrada de La Troya. Es un punto estratégico para el turismo de aventura, con rutas desafiantes y vistas imponentes.",
-        img: [],
+        img: [
+            "/assets/map/deptos/vinchina/1.jpg",
+            "/assets/map/deptos/vinchina/2.jpg",
+            "/assets/map/deptos/vinchina/3.JPG",
+            "/assets/map/deptos/vinchina/4.jpg",
+            "/assets/map/deptos/vinchina/5.jpg",
+            "/assets/map/deptos/vinchina/6.jpg",
+        ],
         region: "Oeste"
     }
 ]
